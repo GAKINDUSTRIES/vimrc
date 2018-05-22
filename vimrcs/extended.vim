@@ -101,9 +101,6 @@ vnoremap " <esc>`>a"<esc>`<i"<esc>
 " Insert single quotes to highlighted word
 vnoremap ' <esc>`>a'<esc>`<i'<esc>
 
-vnoremap > <esc>`>a><esc>`<i<<esc>
-vnoremap < <esc>`>a ><esc>`<i< <esc>
-
 " Map auto complete of (, ", ', [
 inoremap $1 ()<esc>i
 inoremap $2 []<esc>i

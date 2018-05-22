@@ -13,6 +13,9 @@
 " Yank from the cursor to the end of the line, to be consistent with C and D.
   nnoremap Y y$
 
+" configure sytastic to match ionic tags
+let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-"]
+
 set wrap                 " Wrap long lines
 set autoindent           " Indent at the same level of the previous line
 set cindent
@@ -95,7 +98,6 @@ augroup END
 let g:jsx_ext_required = 0
 
 let g:used_javascript_libs = 'jquery, angularjs, flux, requirejs'
-"let g:vim_jsx_pretty_colorful_config = 1 " default 0
 "
 "
 "Map ctags
@@ -105,3 +107,12 @@ map <C-6> :res +2<CR>
 map <C-7> :res -2<CR>
 map <C-8> :vertical res -2<CR>
 map <C-8> :vertical res +2<CR>
+
+
+"Emmet configuration
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
