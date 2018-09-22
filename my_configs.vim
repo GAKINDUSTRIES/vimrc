@@ -13,6 +13,9 @@
 " Yank from the cursor to the end of the line, to be consistent with C and D.
   nnoremap Y y$
 
+" Convert to human-editable JSON in your editor
+nmap =j :%!python -m json.tool<CR>
+
 set wrap                 " Wrap long lines
 set autoindent           " Indent at the same level of the previous line
 set cindent
@@ -58,9 +61,8 @@ endif
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-        \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 
 " Easymotion {
     map <C-o> <Plug>(easymotion-bd-w)
@@ -100,6 +102,8 @@ let g:used_javascript_libs = 'jquery, angularjs, flux, requirejs'
 "
 "Map ctags
 nnoremap <leader>. :CtrlPTag<cr>
+set tags=./tags
+
 
 map <C-6> :res +2<CR>
 map <C-7> :res -2<CR>
