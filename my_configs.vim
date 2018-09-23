@@ -27,30 +27,6 @@ set tabstop=2            " Let backspace delete indent
 set softtabstop=2        " Prevents inserting two spaces after punctuation on a join (J)
 set nojoinspaces
 
-
-" Vim surround {
-  " add parenthesis just with )
-  " vnoremap )  s)
-  " " add parenthesis with space just with (
-  " vmap ( s(
-  " " add parenthesis just with )
-  " vmap ' s'
-  " " add parenthesis just with )
-  " vmap ] s]
-  " " add parenthesis with space just with (
-  " vmap [ s[
-  " " add parenthesis just with )
-  " vmap } s}
-  " " add parenthesis with space just with (
-  " vmap { s{
-  " " add parenthesis just with )
-  " vmap " s"
-" }
-"
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
-
 if has('clipboard')
   if has('unnamedplus')   " When possible use + register for copy-paste
     set clipboard=unnamed,unnamedplus
@@ -76,7 +52,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 "
 " GitGutter {
     let g:gitgutter_enabled = 1
-    let g:gitgutter_sign_column_always = 1
+    set signcolumn=yes
 " }
 "
 " Change cursor shape between insert and normal mode in iTerm2.app
@@ -104,8 +80,7 @@ let g:used_javascript_libs = 'jquery, angularjs, flux, requirejs'
 nnoremap <leader>. :CtrlPTag<cr>
 set tags=./tags
 
-
-map <C-6> :res +2<CR>
-map <C-7> :res -2<CR>
-map <C-8> :vertical res -2<CR>
-map <C-8> :vertical res +2<CR>
+" map <C-6> :res +2<CR>
+" map <C-7> :res -2<CR>
+" map <C-8> :vertical res -2<CR>
+" map <C-9> :vertical res +2<CR>

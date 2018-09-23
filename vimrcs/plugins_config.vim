@@ -12,6 +12,7 @@ call pathogen#infect('~/.vim_runtime/sources_forked/{}')
 call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
 call pathogen#helptags()
 
+
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
@@ -28,12 +29,14 @@ map <leader>o :BufExplorer<cr>
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>
 
-""""""""""""""""""""""""""""""
-" => YankStack
-""""""""""""""""""""""""""""""
-nmap <c-p> <Plug>yankstack_substitute_older_paste
-nmap <c-P> <Plug>yankstack_substitute_newer_paste
 
+""""""""""""""""""""""""""""""
+" => YankRing
+""""""""""""""""""""""""""""""
+let g:yankring_max_history = 20
+let g:yankring_max_display = 70
+let g:yankring_window_height = 23
+map <leader><space> :YRShow<CR>
 
 """"""""""""""""""""""""""""""
 " => CTRL-P
@@ -98,16 +101,13 @@ au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \   'right':[ [ 'lineinfo' ], ['percent'] ]
       \ },
       \ 'component_function': {
       \   'filename': 'LightLineFilename'
@@ -174,3 +174,10 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim expand region (Vim smart selection)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
+

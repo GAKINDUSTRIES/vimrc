@@ -28,8 +28,24 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-set background=dark
-colorscheme hybrid
+" set termguicolors
+
+" colorscheme palenight
+" let g:lightline.colorscheme = 'palenight'
+" let g:palenight_terminal_italics=1
+
+" Ayu colorscheme CONF
+" let ayucolor="mirage"
+" colorscheme ayu
+
+" Hybrid colorscheme CONF
+  colorscheme hybrid
+  set background=dark
+"
+" Nord colorscheme CONF
+" colorscheme nord
+" let g:nord_italic = 1
+" let g:nord_italic_comments = 1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
