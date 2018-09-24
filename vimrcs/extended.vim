@@ -28,25 +28,34 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-" set termguicolors
+  set background=dark
+	set termguicolors
 
-" colorscheme palenight
-" let g:lightline.colorscheme = 'palenight'
-" let g:palenight_terminal_italics=1
+" Palenlight colorscheme CONF
+	colorscheme palenight
+	let g:lightline.colorscheme = 'palenight'
+	let g:palenight_terminal_italics=1
 
 " Ayu colorscheme CONF
-" let ayucolor="mirage"
-" colorscheme ayu
+	" let ayucolor="mirage"
+	" colorscheme ayu
 
 " Hybrid colorscheme CONF
-  colorscheme hybrid
-  set background=dark
-"
-" Nord colorscheme CONF
-" colorscheme nord
-" let g:nord_italic = 1
-" let g:nord_italic_comments = 1
+  " colorscheme hybrid
 
+" Nord colorscheme CONF
+	" colorscheme nord
+	" let g:nord_italic = 1
+	" let g:nord_italic_comments = 1
+  "
+" Nord colorscheme CONF
+    " Possible coloscheme options:
+        "solarized8: the default Solarized theme;
+        " solarized8_low: low-contrast variant;
+        " solarized8_high: high-contrast variant;
+        " solarized8_flat: ÒflatÓ variant (not present in the original Solarized, see screenshots above).
+  " colorscheme solarized8_flat
+  "
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
