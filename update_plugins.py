@@ -19,7 +19,6 @@ PLUGINS = """
 ack.vim https://github.com/mileszs/ack.vim
 ag.vim https://github.com/rking/ag.vim
 bufexplorer https://github.com/corntrace/bufexplorer
-ctrlp.vim https://github.com/ctrlpvim/ctrlp.vim
 nerdtree https://github.com/scrooloose/nerdtree
 nginx-vim-syntax https://github.com/evanmiller/nginx-vim-syntax
 open_file_under_cursor.vim https://github.com/amix/open_file_under_cursor.vim

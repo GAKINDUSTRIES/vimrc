@@ -69,7 +69,6 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [ag.vim](https://github.com/rking/ag.vim): A much faster Ack
 * [auto pairs.vim](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
 * [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip): Buffer Explorer / Browser. This plugin can be opened with `<leader+o>`
-* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim): Fuzzy file, buffer, mru and tag finder. In my config it's mapped to `<Ctrl+F>`, because `<Ctrl+P>` is used by YankRing
 * [emmet.vim](https://github.com/mattn/emmet-vim): Support for expanding abbreviations for HTML & CSS
 * [gist.vim](https://github.com/mattn/gist-vim): Vimscript for creating gists
 * [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2):Remove all clutter and focus only on the essential. Similar to iA Writer or Write Room [Read more here](http://amix.dk/blog/post/19744)
@@ -142,10 +141,6 @@ Open [bufexplorer](https://github.com/vim-scripts/bufexplorer.zip) and see and m
 Open [MRU.vim](https://github.com/vim-scripts/mru.vim) and see the recently open files (`<leader>f`):
 
     map <leader>f :MRU<CR>
-
-Open [ctrlp.vim](https://github.com/kien/ctrlp.vim) plugin (`<leader>j` or `<ctrl>f`):
-
-    let g:ctrlp_map = '<c-f>'
 
 Managing the [NERD Tree](https://github.com/scrooloose/nerdtree) plugin:
 

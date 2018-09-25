@@ -36,8 +36,6 @@ if has('clipboard')
 endif
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 
 " Easymotion {
@@ -73,12 +71,6 @@ augroup END
 let g:jsx_ext_required = 0
 
 let g:used_javascript_libs = 'jquery, angularjs, flux, requirejs'
-"let g:vim_jsx_pretty_colorful_config = 1 " default 0
-"
-"
-"Map ctags
-nnoremap <leader>. :CtrlPTag<cr>
-set tags=./tags
 
 " map <C-6> :res +2<CR>
 " map <C-7> :res -2<CR>
