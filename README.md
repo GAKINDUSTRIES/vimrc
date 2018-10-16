@@ -70,6 +70,7 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [auto pairs.vim](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
 * [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip): Buffer Explorer / Browser. This plugin can be opened with `<leader+o>`
 * [emmet.vim](https://github.com/mattn/emmet-vim): Support for expanding abbreviations for HTML & CSS
+* [fzf.vim](https://github.com/junegunn/fzf.vim): Fzf is a general-purpose command-line fuzzy finder
 * [gist.vim](https://github.com/mattn/gist-vim): Vimscript for creating gists
 * [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2):Remove all clutter and focus only on the essential. Similar to iA Writer or Write Room [Read more here](http://amix.dk/blog/post/19744)
 * [NERD Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim
@@ -211,10 +212,6 @@ Open vimgrep and put the cursor in the right position:
 Vimgreps in the current file:
 
 	map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
-
-Remove the Windows ^M - when the encodings gets messed up:
-
-	noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 Quickly open a buffer for scripbble:
 
