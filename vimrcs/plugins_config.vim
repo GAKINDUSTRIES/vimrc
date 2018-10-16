@@ -102,9 +102,12 @@ map <leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-multiple-cursors
+" => vim-visual-multi
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_next_key="\<C-s>"
+" Map Alt key for j and k to add cursors vertically
+" https://github.com/mg979/vim-visual-multi/wiki/Q.-Quick-start#adding-cursors-vertically
+map ∆ <A-j>
+map ˚ <A-k>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

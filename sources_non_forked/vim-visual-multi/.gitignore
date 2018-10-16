@@ -1,0 +1,6 @@
+*vim-bookmarks
+.TODO
+tags
+doc/tags
+test
+*.sw*

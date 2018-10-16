@@ -89,6 +89,7 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [vim-snipMate](https://github.com/garbas/vim-snipmate): snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim. SnipMate depends on [vim-addon-mw-utils](https://github.com/marcweber/vim-addon-mw-utils) and [tlib](https://github.com/tomtom/tlib_vim)
 * [vim-snippets](https://github.com/honza/vim-snippets): contains snippets files for various programming languages.
 * [vim-surround](https://github.com/tpope/vim-surround): Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more
+* [vim-visual-multi](https://github.com/mg979/vim-visual-multi): Multiple cursors project for vim/neovim (wip)
 * [yank-ring](https://github.com/vim-scripts/YankRing.vim): The YankRing plugin allows the user to configure the number of yanked, deleted and changed text
 
 ## Included color schemes
