@@ -62,15 +62,12 @@ else
   let &t_EI = "\<esc>]50;CursorShape=0\x7"
 endif
 
-augroup markdown
-  au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
-
-
 let g:jsx_ext_required = 0
 
 let g:used_javascript_libs = 'jquery, angularjs, flux, requirejs'
+
+
+call arpeggio#map('i', '', 0, 'kl', '<Esc>')
 
 " map <C-6> :res +2<CR>
 " map <C-7> :res -2<CR>

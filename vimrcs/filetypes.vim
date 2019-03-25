@@ -36,5 +36,8 @@ au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 
 """"""""""""""""""""""""""""""
-" => Shell section
+" => Markdown section
 """"""""""""""""""""""""""""""
+
+" Recognize .md as markdown
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown

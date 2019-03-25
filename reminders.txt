@@ -1,0 +1,49 @@
+Tabs
+
+<leader>tn                :tabnew<cr>
+<leader>to                :tabonly<cr>
+<leader>tc                :tabclose<cr>
+<leader>tm                :tabmove
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+<leader>te                :tabedit <c-r>=expand("%:p:h")<cr>/
+
+
+Buffers
+
+<leader o>                : Open buffers
+<leader>q                 : Open a buffer to shoot ideas
+<leader>bd                : Delete current buffer
+<leader>l                 : Next buffer
+
+
+HTML
+
+<c-y>,                    :Autocomplete html tags
+
+
+FZF
+
+Colors                    :Search colorschemes
+Buffers                   :Search buffers
+Lines                     :Search in lines of loaded buffers
+<leader> j:               :Search by filename
+<leader> .                :Search in tags
+Commits                   :Search in commits
+History                   :Search in history commands
+Maps                      :Search in all maps
+
+
+Focus
+
+<leader>z                 :Remove everything to keep focus
+
+MRU
+
+<leader>f                 :Open MRU files
+
+Smart selection
+
+map K                     :expand_region_expand
+map J                     :expand_region_shrink
