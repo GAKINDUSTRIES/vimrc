@@ -78,6 +78,7 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [pathogen.vim](https://github.com/tpope/vim-pathogen): Manages the runtime path of the plugins
 * [mru.vim](https://github.com/vim-scripts/mru.vim): Plugin to manage Most Recently Used (MRU) files. Includes my own fork which adds syntax highlighting to MRU. This plugin can be opened with `<leader+f>`
 * [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim
+* [vim-arpeggio](https://github.com/kana/vim-arpeggio): This plugin causes all trailing whitespace characters (see Supported Whitespace Characters below) to be highlighted.
 * [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace): This plugin causes all trailing whitespace characters (see Supported Whitespace Characters below) to be highlighted.
 * [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.
 * [vim-easymotion.vim](https://github.com/easymotion/vim-easymotion.vim): Provides a much simpler way to use some motions in vim
@@ -94,11 +95,11 @@ I recommend reading the docs of these plugins to understand them better. Each of
 
 ## Included color schemes
 
-* [ayu-vim](https://github.com/ayu-theme/ayu-vim) (light, mirage (prefered) and dark themes)
-* [lightline](https://github.com/itchyny/lightline.vim) A light and configurable statusline/tabline for Vim
-* [palenlight](https://github.com/drewtempelmeyer/palenight.vim)
+* [ayu-vim](https://github.com/ayu-theme/ayu-vim) Light, mirage (prefered) and dark themes
+* [lightline](https://github.com/itchyny/lightline.vim) A light and configurable statusline/tabline for Vim.
+* [palenlight](https://github.com/drewtempelmeyer/palenight.vim) A dark color scheme for Vim/Neovim based off the Material Pale Night color scheme. (my favourite)
 * [vim-solarized8](https://github.com/lifepillar/vim-solarized8)
-* [nord-vim](https://github.com/arcticicestudio/nord-vim)
+* [nord-vim](https://github.com/arcticicestudio/nord-vim) An arctic, north-bluish clean and elegant Vim color theme.
 * [vim-hybrid](https://github.com/w0ng/vim-hybrid)
 
 
@@ -107,7 +108,7 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
 * [vim-javascript](https://github.com/pangloss/vim-javascript)
 * [vim-jsx](https://github.com/mxw/vim-jsx)
-* [vim-pug](https://github.com/digitaltoad/vim-pug):     Syntax highlight for Jade)
+* [vim-pug](https://github.com/digitaltoad/vim-pug): Syntax highlight for Jade
 * [vim-less](https://github.com/groenewege/vim-less)
 * [vim-markdown](https://github.com/tpope/vim-markdown): Folding
 * [nginx.vim](https://github.com/vim-scripts/nginx.vim): Highlights configuration files for nginx
