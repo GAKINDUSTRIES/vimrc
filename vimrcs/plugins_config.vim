@@ -16,17 +16,17 @@ call pathogen#helptags()
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
+let g:bufExplorerDefaultHelp= 0
+let g:bufExplorerShowRelativePath= 1
+let g:bufExplorerFindActive= 1
+let g:bufExplorerSortBy= 'name'
 map <leader>o :BufExplorer<cr>
 
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
 """"""""""""""""""""""""""""""
-let MRU_Max_Entries = 400
+let MRU_Max_Entries = 300
 map <leader>f :MRU<CR>
 
 
@@ -201,3 +201,27 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 map K <Plug>(expand_region_expand)
 map J <Plug>(expand_region_shrink)
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => arpeggio()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vimux ()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <space><space> :VimuxPromptCommand<CR>
+nmap <C-space> :VimuxRunCommand("clear")<CR>
+nmap <space>. :VimuxRunLastCommand<CR>
+nmap <space>q :VimuxInterruptRunner<CR>
+
+
+"Keep consistency with vim-vroom mappings
+nmap <space>a :VimuxRunCommand("clear;bundle exec rspec --color")<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-vroom (Ruby test vimux integration)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vroom_use_vimux = 1
+let g:vroom_clear_screen = 1
+let g:vroom_write_all = 1

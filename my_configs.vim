@@ -67,9 +67,8 @@ let g:jsx_ext_required = 0
 let g:used_javascript_libs = 'jquery, angularjs, flux, requirejs'
 
 
-call arpeggio#map('i', '', 0, 'kl', '<Esc>')
-
 " map <C-6> :res +2<CR>
 " map <C-7> :res -2<CR>
 " map <C-8> :vertical res -2<CR>
 " map <C-9> :vertical res +2<CR>
+"

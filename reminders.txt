@@ -1,3 +1,7 @@
+JSON
+"convert to human-editable JSON in your editor
+ =j :%!python -m json.tool<CR>
+
 Tabs
 
 <leader>tn                :tabnew<cr>
@@ -27,7 +31,7 @@ FZF
 
 Colors                    :Search colorschemes
 Buffers                   :Search buffers
-Lines                     :Search in lines of loaded buffers
+<leader> m (Lines)        :Search in lines of loaded buffers
 <leader> j:               :Search by filename
 <leader> .                :Search in tags
 Commits                   :Search in commits
@@ -47,3 +51,14 @@ Smart selection
 
 map K                     :expand_region_expand
 map J                     :expand_region_shrink
+
+Vim surround
+
+ds)                       :Delete surround of parenthesis (can be applied for all surroundings)
+
+
+Vimux
+
+nmap <space><space> :VimuxPromptCommand<CR>
+nmap <C-space> :VimuxRunCommand("clear")<CR>
+nmap <space>. :VimuxRunLastCommand<CR>
