@@ -62,3 +62,8 @@ Vimux
 nmap <space><space> :VimuxPromptCommand<CR>
 nmap <C-space> :VimuxRunCommand("clear")<CR>
 nmap <space>. :VimuxRunLastCommand<CR>
+
+
+silent! map <unique> <space>f :VroomRunTestFile<CR>
+silent! map <unique> <space>l :VroomRunNearestTest<CR>
+silent! map <unique> <space>. :VroomRunLastTest<CR>

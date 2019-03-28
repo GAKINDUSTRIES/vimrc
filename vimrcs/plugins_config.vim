@@ -67,6 +67,9 @@ let g:fzf_colors =
 " Avoid open files in NERDTree pane
 nnoremap <silent> <expr> <Leader>j (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 
+" Close vim if nerdtree is the only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 """"""""""""""""""""""""""""""
 " => ZenCoding
