@@ -68,11 +68,12 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [ack.vim](https://github.com/mileszs/ack.vim): Vim plugin for the Perl module / CLI script 'ack'
 * [ag.vim](https://github.com/rking/ag.vim): A much faster Ack
 * [auto pairs.vim](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
-* [bufexplorer.zip](https://github.com/vim-scripts/bufexplorer.zip): Buffer Explorer / Browser. This plugin can be opened with `<leader+o>`
+* [bufexplorer.zip](https://github.com/jlanzarotta/bufexplorer): Buffer Explorer / Browser. This plugin can be opened with `<leader+o>`
 * [emmet.vim](https://github.com/mattn/emmet-vim): Support for expanding abbreviations for HTML & CSS
 * [fzf.vim](https://github.com/junegunn/fzf.vim): Fzf is a general-purpose command-line fuzzy finder
-* [gist.vim](https://github.com/mattn/gist-vim): Vimscript for creating gists
+<!-- * [gist.vim](https://github.com/mattn/gist-vim): Vimscript for creating gists -->
 * [goyo.vim](https://github.com/junegunn/goyo.vim) and [vim-zenroom2](https://github.com/amix/vim-zenroom2):Remove all clutter and focus only on the essential. Similar to iA Writer or Write Room [Read more here](http://amix.dk/blog/post/19744)
+* [limelight.vim](https://github.com/junegunn/limelight.vim) Hyper-focus writing in vim
 * [NERD Tree](https://github.com/scrooloose/nerdtree): A tree explorer plugin for vim
 * [open_file_under_cursor.vim](https://github.com/amix/open_file_under_cursor.vim): Open file under cursor when pressing `gf`
 * [pathogen.vim](https://github.com/tpope/vim-pathogen): Manages the runtime path of the plugins
@@ -97,6 +98,7 @@ I recommend reading the docs of these plugins to understand them better. Each of
 
 * [ayu-vim](https://github.com/ayu-theme/ayu-vim) Light, mirage (prefered) and dark themes
 * [lightline](https://github.com/itchyny/lightline.vim) A light and configurable statusline/tabline for Vim.
+* [onehalf](https://github.com/sonph/onehalf/tree/master/vim)
 * [palenlight](https://github.com/drewtempelmeyer/palenight.vim) A dark color scheme for Vim/Neovim based off the Material Pale Night color scheme. (my favourite)
 * [vim-solarized8](https://github.com/lifepillar/vim-solarized8)
 * [nord-vim](https://github.com/arcticicestudio/nord-vim) An arctic, north-bluish clean and elegant Vim color theme.

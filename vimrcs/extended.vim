@@ -1,11 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important:
-"       This requries that you install https://github.com/amix/vimrc !
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
@@ -36,26 +29,33 @@ set guioptions-=L
 	let g:lightline.colorscheme = 'palenight'
 	let g:palenight_terminal_italics=1
 
+" One half colorscheme CONF
+  " colorscheme onehalfdark
+  " let g:lightline.colorscheme='onehalfdark'
+
 " Ayu colorscheme CONF
-	" let ayucolor="mirage"
+  " let ayucolor="light"  " for light version of theme
+  " let ayucolor="mirage" " for mirage version of theme
+  " let ayucolor="dark"   " for dark version of theme
 	" colorscheme ayu
 
 " Hybrid colorscheme CONF
   " colorscheme hybrid
+  " let g:hybrid_custom_term_colors = 1
+  " let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 
 " Nord colorscheme CONF
 	" colorscheme nord
 	" let g:nord_italic = 1
 	" let g:nord_italic_comments = 1
   "
-" Nord colorscheme CONF
+" Solarized colorscheme CONF
     " Possible coloscheme options:
-        "solarized8: the default Solarized theme;
+        " solarized8: the default Solarized theme;
         " solarized8_low: low-contrast variant;
         " solarized8_high: high-contrast variant;
         " solarized8_flat: ÒflatÓ variant (not present in the original Solarized, see screenshots above).
   " colorscheme solarized8_flat
-  "
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
@@ -145,7 +145,6 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 " => Omni complete functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

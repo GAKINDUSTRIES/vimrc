@@ -1,10 +1,3 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important:
-"       This requries that you install https://github.com/amix/vimrc !
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
@@ -19,7 +12,7 @@ call pathogen#helptags()
 let g:bufExplorerDefaultHelp= 0
 let g:bufExplorerShowRelativePath= 1
 let g:bufExplorerFindActive= 1
-let g:bufExplorerSortBy= 'name'
+let g:bufExplorerSortBy= 'mru'
 map <leader>o :BufExplorer<cr>
 
 
@@ -33,10 +26,10 @@ map <leader>f :MRU<CR>
 """"""""""""""""""""""""""""""
 " => YankRing
 """"""""""""""""""""""""""""""
-let g:yankring_max_history = 20
-let g:yankring_max_display = 70
-let g:yankring_window_height = 23
-map <leader><space> :YRShow<CR>
+" let g:yankring_max_history = 20
+" let g:yankring_max_display = 70
+" let g:yankring_window_height = 23
+" map <leader><space> :YRShow<CR>
 
 
 """"""""""""""""""""""""""""""
@@ -46,7 +39,12 @@ map <leader><space> :YRShow<CR>
 set rtp+=/usr/local/opt/fzf
 
 nnoremap <leader>. :Tags<Cr>
-nnoremap <leader>m :Lines<Cr>
+nnoremap <leader>l :Lines<Cr>
+
+" Remove Status line
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -64,18 +62,49 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+
+" Global path completion
+imap <c-p> <plug>(fzf-complete-path)
+
+" Global line completion (not just open buffers. ripgrep required.)
+inoremap <expr> <c-l> fzf#vim#complete(fzf#wrap({
+  \ 'prefix': '^.*$',
+  \ 'source': 'rg -n ^ --color always',
+  \ 'options': '--ansi --delimiter : --nth 3..',
+  \ 'reducer': { lines -> join(split(lines[0], ':\zs')[2:], '') }}))
+
+
+""""""""""""""""""""""""""""""
+" => Easymotion
+""""""""""""""""""""""""""""""
+
+" Disable default mappings
+let g:EasyMotion_do_mapping = 0
+" Turn on case-insensitive feature
+let g:EasyMotion_smartcase = 1
+
+map <C-o> <Plug>(easymotion-bd-w)
+
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+
+""""""""""""""""""""""""""""""
+" => NERDTree
+""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
+
 " Avoid open files in NERDTree pane
 nnoremap <silent> <expr> <Leader>j (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 
 " Close vim if nerdtree is the only window left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-
-""""""""""""""""""""""""""""""
-" => ZenCoding
-""""""""""""""""""""""""""""""
-" Enable all functions in all modes
-let g:user_zen_mode='a'
 
 
 """"""""""""""""""""""""""""""
@@ -90,18 +119,6 @@ snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
 """"""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Nerd Tree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "right"
-let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=35
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark
-map <leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -156,14 +173,22 @@ function! LightLineFilename()
   return expand('%')
 endfunction
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vimroom
+" => Goyo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:goyo_width=100
 let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
 nnoremap <silent> <leader>z :Goyo<cr>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Limelight
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Goyo integration
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim-go
@@ -195,9 +220,9 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
+let g:gitgutter_enabled = 1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
-
+set updatetime=100
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim expand region (Vim smart selection)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -2,25 +2,46 @@ JSON
 "convert to human-editable JSON in your editor
  =j :%!python -m json.tool<CR>
 
+Misc
+
+<leader>cd              : Switch CWD to the directory of the current buffer
+<leader><enter>         : Disable highlight
+
+map <leader>e           : Open my_configs.vimrc for edition
+map <leader>q           : Open ~/buffer.md
+map <leader>x           : Open ~/buffer
+
+Windows
+
+<ctrl> hjkl              : Move between windows
+
+
 Tabs
 
-<leader>tn                :tabnew<cr>
-<leader>to                :tabonly<cr>
-<leader>tc                :tabclose<cr>
-<leader>tm                :tabmove
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-<leader>te                :tabedit <c-r>=expand("%:p:h")<cr>/
+<leader>tn                : Open a new tab
+<leader>to                : Keep only current tab, close others
+<leader>tc                : Close current tab
+<leader>tp                : Go to previous tab
+<leader>t<leader>         : Go to next tab
+<leader>tl                : Go to last tab
+<leader>te                : Open edition to a new tab in the same directory
 
 
 Buffers
 
-<leader o>                : Open buffers
+<leader>o                 : Open buffers
 <leader>q                 : Open a buffer to shoot ideas
+<leader>bn                : Creates a new buffer
 <leader>bd                : Delete current buffer
-<leader>l                 : Next buffer
+<leader>ba                : Close all buffers
+<leader>b<leader>         : Next buffer
+<leader>bp                : Previous buffer
 
+Search
+
+<leader>g                 : Global search
+gv                        : When press gv you Ag the selected text
+<leader>r                 : Search an replace the selected text
 
 HTML
 
@@ -29,14 +50,21 @@ HTML
 
 FZF
 
+<leader>.                 : Search within tags
+<leader>l                 : Search within lines
+<leader>j                 :Search by filename
+
 Colors                    :Search colorschemes
 Buffers                   :Search buffers
-<leader> m (Lines)        :Search in lines of loaded buffers
-<leader> j:               :Search by filename
 <leader> .                :Search in tags
 Commits                   :Search in commits
 History                   :Search in history commands
 Maps                      :Search in all maps
+
+  On Insert mode:
+
+  <ctrl>l                 :Global line completion
+  <ctrl>p                 :Global path completion
 
 
 Focus

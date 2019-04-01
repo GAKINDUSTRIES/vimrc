@@ -37,12 +37,6 @@ endif
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 
-
-" Easymotion {
-    map <C-o> <Plug>(easymotion-bd-w)
-    map <C-i> <Plug>(easymotion-sn)
-" }
-
 " BetterWhitespace {
     autocmd FileType * autocmd BufWritePre <buffer> StripWhitespace     " Strip trailling whitespace on save
 " }
@@ -66,6 +60,7 @@ let g:jsx_ext_required = 0
 
 let g:used_javascript_libs = 'jquery, angularjs, flux, requirejs'
 
+let g:used_javascript_libs = 'underscore,backbone,angularjs,react'
 
 " map <C-6> :res +2<CR>
 " map <C-7> :res -2<CR>
