@@ -80,7 +80,6 @@ I recommend reading the docs of these plugins to understand them better. Each of
 * [mru.vim](https://github.com/vim-scripts/mru.vim): Plugin to manage Most Recently Used (MRU) files. Includes my own fork which adds syntax highlighting to MRU. This plugin can be opened with `<leader+f>`
 * [syntastic](https://github.com/scrooloose/syntastic): Syntax checking hacks for vim
 * [vim-arpeggio](https://github.com/kana/vim-arpeggio): This plugin causes all trailing whitespace characters (see Supported Whitespace Characters below) to be highlighted.
-* [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace): This plugin causes all trailing whitespace characters (see Supported Whitespace Characters below) to be highlighted.
 * [vim-commentary](https://github.com/tpope/vim-commentary): Comment stuff out.  Use `gcc` to comment out a line (takes a count), `gc` to comment out the target of a motion. `gcu` uncomments a set of adjacent commented lines.
 * [vim-easymotion.vim](https://github.com/easymotion/vim-easymotion.vim): Provides a much simpler way to use some motions in vim
 * [vim-endwise](https://github.com/tpope/vim-endwise.vim): Helps to end certain structures automatically

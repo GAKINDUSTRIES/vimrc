@@ -5,6 +5,26 @@ call pathogen#infect('~/.vim_runtime/sources_forked/{}')
 call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
 call pathogen#helptags()
 
+""""""""""""""""""""""""""""""
+" => Ale
+""""""""""""""""""""""""""""""
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['rubocop'],
+\}
+
+let g:ale_linters = {
+\                     'javascript': ['jshint'],
+\                     'css': ['csslint'],
+\                     'html':['htmlhint'],
+\                   }
+
+" " Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+
+let g:ale_sign_warning='●'
+hi ALEWarningSign ctermfg=yellow ctermbg=none
+
 
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
@@ -212,23 +232,23 @@ let g:go_fmt_command = "goimports"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic (syntax checker)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Javascript
-let g:syntastic_javascript_checkers = ['jshint']
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" " Javascript
+" let g:syntastic_javascript_checkers = ['jshint']
 
-" Go
-let g:syntastic_check_on_wq= 0
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+" " Go
+" let g:syntastic_check_on_wq= 0
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
-" Custom CoffeeScript SyntasticCheck
-func! SyntasticCheckCoffeescript()
-    let l:filename = substitute(expand("%:p"), '\(\w\+\)\.coffee', '.coffee.\1.js', '')
-    execute "tabedit " . l:filename
-    execute "SyntasticCheck"
-    execute "Errors"
-endfunc
-nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
+" " Custom CoffeeScript SyntasticCheck
+" func! SyntasticCheckCoffeescript()
+"     let l:filename = substitute(expand("%:p"), '\(\w\+\)\.coffee', '.coffee.\1.js', '')
+"     execute "tabedit " . l:filename
+"     execute "SyntasticCheck"
+"     execute "Errors"
+" endfunc
+" nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

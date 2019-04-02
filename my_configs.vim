@@ -36,11 +36,6 @@ if has('clipboard')
 endif
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-
-" BetterWhitespace {
-    autocmd FileType * autocmd BufWritePre <buffer> StripWhitespace     " Strip trailling whitespace on save
-" }
-"
 "
 " GitGutter {
     let g:gitgutter_enabled = 1
